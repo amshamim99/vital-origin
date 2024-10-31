@@ -46,9 +46,12 @@ tailwind.config = {
             primary:'#3B2F2F',
             secondary:'#6E615C',
             secondary2:'#CDCCCC',
+            secondary3:'#F9ECD8',
             border1:'#D9D9D9',
             border2:'#F5F5F5',
             border3:'#6F5138',
+            border4:'rgba(216, 216, 216, 0.3)',
+            border5:'rgba(255, 255, 255, 0.2)',
         }
         }
     },

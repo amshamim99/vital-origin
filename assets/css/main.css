@@ -7,6 +7,7 @@ h1,h2,h3,h4,h5,h6{
 .vt-bg-overly-3,
 .vt-bg-overly-4, 
 .vt-bg-overly-5,
+.vt-bg-overly-6,
 .vt-gradient-overly,
 .vt-gradient-overly-2,
 .vt-gradient-overly-3{
@@ -17,6 +18,7 @@ h1,h2,h3,h4,h5,h6{
 .vt-bg-overly-3::before,
 .vt-bg-overly-4::before,
 .vt-bg-overly-5::before,
+.vt-bg-overly-6::before,
 .vt-gradient-overly::before,
 .vt-gradient-overly-2::before,
 .vt-gradient-overly-3::before{
@@ -47,6 +49,10 @@ h1,h2,h3,h4,h5,h6{
 .vt-bg-overly-5::before{
     background: #3B2F2F;
     border-radius: 8px;
+    opacity: 1;
+}
+.vt-bg-overly-6::before{
+    background: rgba(54, 42, 42, 0.93);
     opacity: 1;
 }
 .vt-gradient-overly::before{
