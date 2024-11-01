@@ -188,5 +188,283 @@ h1,h2,h3,h4,h5,h6{
 .accordion .accordion-item:not(:last-child){
     border-bottom: 1px solid #6F5138;
 }
-  
+
+/* mobil-menu-start */
+/* main-menu css*/
+.main-menu ul li .tp-submenu{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 250%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.main-menu ul li:hover > .tp-submenu{
+    opacity: 1;
+    visibility: visible;
+    top: 220%;
+}
+
+  /*----------------------------------------*/
+/* 6.2 Mobile css
+/*----------------------------------------*/
+.tp-offcanvas-menu {
+    margin-bottom: 40px;
+  }
+  .tp-offcanvas-menu ul {
+    list-style: none;
+  }
+  .tp-offcanvas-menu ul li {
+    position: relative !important;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+    .tp-offcanvas-menu ul li a i {
+      display: none;
+    }
+  }
+  .tp-offcanvas-menu ul li > a {
+    padding: 8px 0;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .tp-offcanvas-menu ul li:not(:last-child) > a {
+    border-bottom: 1px solid rgba(1, 15, 28, 0.1);
+  }
+  .tp-offcanvas-menu ul li .tp-megamenu-list ul li a {
+    border-bottom: 1px solid rgba(1, 15, 28, 0.1);
+  }
+  .tp-offcanvas-menu ul li:hover > a {
+    color: #FF8C42;
+  }
+  .tp-offcanvas-menu ul li.active > a {
+    color: #FF8C42;
+  }
+  .tp-offcanvas-menu ul li.active > .tp-menu-close {
+    color:white;
+    background: #FF8C42;
+    border-color: #FF8C42;
+  }
+  .tp-offcanvas-menu ul li.active > button.tp-menu-close i {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: white;
+  }
+  .tp-offcanvas-menu ul li .tp-submenu {
+    display: none;
+    padding-left: 20px;
+  }
+  .tp-offcanvas-menu ul li .tp-mega-menu {
+    display: none;
+    padding-left: 0;
+    margin-top: -1px;
+  }
+  .tp-offcanvas-menu .homemenu-title {
+    margin-bottom: 25px;
+  }
+  .tp-offcanvas-style-2 .tp-offcanvas-menu ul li > a {
+    color: #222222;
+  }
+  .tp-offcanvas-style-2 .tp-offcanvas-menu ul li:hover > a {
+    color: var(--tp-theme-primary);
+  }
+  .tp-offcanvas-style-2 .tp-offcanvas-menu ul li.active > a {
+    color: var(--tp-theme-primary);
+  }
+  /* .tp-offcanvas-style-2 .tp-offcanvas-menu ul li.active > .tp-menu-close {
+    color: red;
+    background: green;
+    border-color:blue;
+  } */
+  .tp-menu-close {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+    line-height: 29px;
+    text-align: center;
+    border: 1px solid rgba(1, 15, 28, 0.12);
+    z-index: 99999999;
+  }
+  .tp-menu-close i {
+    display: inline-block;
+    transition: all 0.3s;
+  }
+/*----------------------------------------*/
+  /* 6.3 offcanvas css
+/*----------------------------------------*/
+.body-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.45s ease-in-out;
+  background: rgba(24, 24, 24, 0.4);
+}
+.body-overlay.opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tp-offcanvas-logo {
+  width: 150px;
+}
+.tp-offcanvas-logo img {
+  width: 100%;
+}
+/* to open offcanvas menu left to right */
+.tp-offcanvas-area.left-right{
+  left: 0;
+  right: inherit;
+  transform: translateX(calc(-200% + 80px));
+}
+/* to open offcanvas menu right to left */
+.tp-offcanvas-area{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 450px;
+  height: 100%;
+  z-index: 99;
+  z-index: 99999;
+  padding: 50px 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  background: #FFF;
+  overscroll-behavior-y: contain;
+   -webkit-transform: translateX(calc(100% + 80px));
+  -moz-transform: translateX(calc(100% + 80px));
+  -ms-transform: translateX(calc(100% + 80px));
+  -o-transform: translateX(calc(100% + 80px));
+  transform: translateX(calc(100% + 80px));
+  transition: all 0.3s 0s ease-out;
+  z-index: 9999999999;
+}
+@media only screen and (max-width: 400px) {
+  .tp-offcanvas-area {
+    padding: 35px 30px;
+  }
+}
+@media (max-width: 575px) {
+  .tp-offcanvas-area {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .tp-offcanvas-area {
+    width: 450px;
+  }
+}
+.tp-offcanvas-area.opened {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.tp-offcanvas-area.left-right.opened {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.tp-offcanvas-top {
+  margin-bottom: 60px;
+}
+.tp-offcanvas-close-btn {
+  color: #222222;
+  transform: rotate(0deg);
+  transition: .3s;
+}
+.tp-offcanvas-close-btn:hover {
+  opacity: 1;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.tp-offcanvas-content {
+  margin-bottom: 45px;
+}
+.tp-offcanvas-content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #717171;
+}
+.tp-offcanvas-title {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222222;
+}
+.tp-offcanvas-title.sm {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #222222;
+}
+.tp-offcanvas-gallery {
+  margin-bottom: 65px;
+}
+.tp-offcanvas-contact {
+  margin-bottom: 55px;
+}
+.tp-offcanvas-contact ul li {
+  list-style: none;
+}
+.tp-offcanvas-contact ul li:not(:last-child) {
+  margin-bottom: 2px;
+}
+.tp-offcanvas-contact ul li a {
+  display: inline-block;
+  color: #717171;
+  font-size: 18px;
+  position: relative;
+}
+.tp-offcanvas-contact ul li a::after {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  width: 0;
+  height: 1px;
+  content: "";
+  transition: 0.4s;
+  background-color: #FF385C;
+}
+.tp-offcanvas-contact ul li a:hover {
+  color: #FF385C;
+}
+.tp-offcanvas-contact ul li a:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+/* mobile-menu-end */
+
+/* .menu-fixed-top */
+.menu-fixed {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    z-index: 99999 !important;
+    transition: all 0.9s;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 62px 0px rgba(0, 22, 89, 0.17);
+}
   
