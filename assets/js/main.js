@@ -106,4 +106,45 @@
         });
     });
 
+
+    if($('.scroll-up path').length > 0){
+        //Back-to-top-area-start-here
+        var scrollPath = document.querySelector(".scroll-up path");
+        var pathLength = scrollPath.getTotalLength();
+        scrollPath.style.transition = scrollPath.style.WebkitTransition = "none";
+        scrollPath.style.strokeDasharray = pathLength + " " + pathLength;
+        scrollPath.style.strokeDashoffset = pathLength;
+        scrollPath.getBoundingClientRect();
+        scrollPath.style.transition = scrollPath.style.WebkitTransition =
+            "stroke-dashoffset 10ms linear";
+        var updatescroll = function () {
+            var scroll = $(window).scrollTop();
+            var height = $(document).height() - $(window).height();
+            var scroll = pathLength - (scroll * pathLength) / height;
+            scrollPath.style.strokeDashoffset = scroll;
+        };
+        updatescroll();
+        $(window).scroll(updatescroll);
+        var offset = 50;
+        var duration = 950;
+        $(window).on("scroll", function () {
+            if ($(this).scrollTop() > offset) {
+                $(".scroll-up").addClass("active-scroll");
+            } else {
+                $(".scroll-up").removeClass("active-scroll");
+            }
+        });
+        $(".scroll-up").on("click", function (event) {
+            event.preventDefault();
+            $("html, body").animate(
+                {
+                    scrollTop: 0,
+                },
+                duration
+            );
+            return false;
+        });
+        //Back-to-top-area-end-here
+    }
+
 })(jQuery);
