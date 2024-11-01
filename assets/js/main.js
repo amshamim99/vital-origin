@@ -106,6 +106,14 @@
         });
     });
 
+    // NiceSelect//
+    // if($('.vt-item-select').length > 0){
+    //     var options = {searchable: false, placeholder: 'Sort by'};
+    //     var itemSelct = document.querySelector(".vt-item-select");
+         
+    //     NiceSelect.bind(itemSelct, options); 
+        
+    // }
 
     if($('.scroll-up path').length > 0){
         //Back-to-top-area-start-here
