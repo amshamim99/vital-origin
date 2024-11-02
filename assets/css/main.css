@@ -138,6 +138,9 @@ h1,h2,h3,h4,h5,h6{
 .accordion-two{
   background: none;
 }
+.accordion-three{
+  background: none;
+}
 .menu-button {
     width: 100%;
     /* padding: 32px 56px;
@@ -212,11 +215,18 @@ h1,h2,h3,h4,h5,h6{
 .accordion-two .content.open{
   height: auto;
 }
+.accordion-three .content p{
+  padding: 0 40px;
+}
 .accordion .accordion-item:not(:last-child){
     border-bottom: 1px solid #6F5138;
 }
 .accordion-two .accordion-item{
   border-bottom: 1px solid rgba(111, 81, 56, 0.4) !important;
+}
+.accordion-three .accordion-item{
+  border-top: 1px solid rgba(111, 81, 56, 0.4) !important;
+  border-bottom: none !important;
 }
 
 /* mobil-menu-start */
