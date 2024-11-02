@@ -525,6 +525,9 @@ h1,h2,h3,h4,h5,h6{
     background-color: #FFFFFF;
     box-shadow: 0px 0px 62px 0px rgba(0, 22, 89, 0.17);
 }
+.menu-fixed .vt-header-top{
+  display: none;
+}
 /* .scroll-up-bottom-to-top */
 .scroll-up {
     cursor: pointer;
