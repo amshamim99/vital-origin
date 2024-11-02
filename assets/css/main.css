@@ -160,7 +160,7 @@ h1,h2,h3,h4,h5,h6{
     cursor: pointer;
 }
 @media screen and (max-width: 767px) {
-   .menu-button{
+   .accordion .menu-button{
         font-size: 14px;
         text-align: left;
         padding: 20px 10px !important;
@@ -168,6 +168,11 @@ h1,h2,h3,h4,h5,h6{
    .content p{
         padding:0px 10px !important;
     }
+}
+@media screen and (max-width: 767px) {
+  .accordion-two .menu-button{
+       padding: inherit !important;
+  }
 }
 .accordion-two .menu-button{
   padding: 5px 0;
