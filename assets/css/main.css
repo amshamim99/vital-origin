@@ -135,6 +135,9 @@ h1,h2,h3,h4,h5,h6{
 .accordion{
     background: rgba(255, 255, 255, 0.8);
 }
+.accordion-two{
+  background: none;
+}
 .menu-button {
     width: 100%;
     /* padding: 32px 56px;
@@ -156,6 +159,9 @@ h1,h2,h3,h4,h5,h6{
         padding:0px 10px !important;
     }
 }
+.accordion-two .menu-button{
+  padding: 5px 0;
+}
 .plus {
     font-size: 20px;
     color: #6F5138;
@@ -166,6 +172,14 @@ h1,h2,h3,h4,h5,h6{
     color: #6F5138;
     transition: 0.4s;
     display: none;
+}
+.chevron-down{
+  font-size: 20px;
+  transform: rotate(-90deg);
+  transition: 0.4s;
+}
+.menu-button.open .chevron-down{
+  transform: rotate(0deg);
 }
 .menu-button.open .plus {
 /* transform: rotate(45deg); */
@@ -188,8 +202,21 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 20px;
     padding: 0 56px;
 }
+.accordion-two .content p{
+  padding: 0;
+}
+.accordion-two .content{
+  height: 0;
+  transition: 0.4s;
+}
+.accordion-two .content.open{
+  height: auto;
+}
 .accordion .accordion-item:not(:last-child){
     border-bottom: 1px solid #6F5138;
+}
+.accordion-two .accordion-item{
+  border-bottom: 1px solid rgba(111, 81, 56, 0.4) !important;
 }
 
 /* mobil-menu-start */
