@@ -160,14 +160,19 @@ h1,h2,h3,h4,h5,h6{
     cursor: pointer;
 }
 @media screen and (max-width: 767px) {
-   .accordion .menu-button{
-        font-size: 14px;
-        text-align: left;
-        padding: 20px 10px !important;
-   }
-   .content p{
-        padding:0px 10px !important;
-    }
+  .accordion .menu-button{
+    font-size: 14px;
+    text-align: left;
+    padding: 20px 10px !important;
+  }
+  .accordion .content p{
+      padding:0px 10px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accordion.accordion-three .menu-button{
+    padding: 20px 0 20px 40px !important;
+  }
 }
 @media screen and (max-width: 767px) {
   .accordion-two .menu-button{
@@ -217,8 +222,12 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 20px;
     padding: 0 56px;
 }
-.accordion-two .content p{
-  padding: 0;
+.accordion.accordion-two .content p{
+  padding:0px !important;
+}
+.accordion.accordion-three .content p{
+  padding: 0 40px;
+  text-align: left;
 }
 .accordion-two .content{
   height: 0;
@@ -226,9 +235,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .accordion-two .content.open{
   height: auto;
-}
-.accordion-three .content p{
-  padding: 0 40px;
 }
 .accordion .accordion-item:not(:last-child){
     border-bottom: 1px solid #6F5138;
