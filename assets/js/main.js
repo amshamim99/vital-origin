@@ -81,6 +81,22 @@
         }
         });
     }
+      // jquery-tabs-2//
+      if($('.vt-filter-tab-2 li a').length > 0){
+        $('.vt-filter-tab-2 li a').click(function(e){
+        e.preventDefault();
+    
+        var t = $(this).attr('id');
+    
+        if(!$(this).hasClass('active')){
+            $('.vt-filter-tab-2 li a').removeClass('active');           
+            $(this).addClass('active');
+    
+            $('.vt-tab-body').addClass('vt-hidden');
+            $('#'+ t + '-body').removeClass('vt-hidden');
+        }
+        });
+    }
 
     // quantity-input//
     let incrementBtn = document.querySelector('.increment');
