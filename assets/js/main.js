@@ -65,6 +65,23 @@
         slidesToScroll: 1
     });
 
+     // jquery-tabs//
+    if($('.vt-filter-tab li a').length > 0){
+        $('.vt-filter-tab li a').click(function(e){
+        e.preventDefault();
+    
+        var t = $(this).attr('id');
+    
+        if(!$(this).hasClass('active')){
+            $('.vt-filter-tab li a').removeClass('active');           
+            $(this).addClass('active');
+    
+            $('.vt-ftab-body').addClass('vt-hidden');
+            $('#'+ t + '-body').removeClass('vt-hidden');
+        }
+        });
+    }
+
     // quantity-input//
     let incrementBtn = document.querySelector('.increment');
     let decrementBtn = document.querySelector('.decrement');

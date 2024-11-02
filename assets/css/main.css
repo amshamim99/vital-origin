@@ -90,6 +90,10 @@ h1,h2,h3,h4,h5,h6{
 .subscribe input::placeholder{
     color: white;
 }
+/* .vt-filter-tab */
+.vt-filter-tab-1 li a.active{
+  color: #F7B663;
+}
 /* input-rado */
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
