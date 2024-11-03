@@ -42,6 +42,7 @@ tailwind.config = {
             orange2:'#F7B663',
             green:'#A2D9A5',
             pinkLight:'#F9ECD8',
+            pinkLight2:'#FFF4E3',
             bodyBg:'#FDF9F3',
             primary:'#3B2F2F',
             secondary:'#6E615C',
