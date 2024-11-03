@@ -259,7 +259,7 @@ h1,h2,h3,h4,h5,h6{
 .main-menu ul li:hover > .tp-submenu{
     opacity: 1;
     visibility: visible;
-    top: 220%;
+    top: 205%;
 }
 
   /*----------------------------------------*/
