@@ -257,9 +257,25 @@ h1,h2,h3,h4,h5,h6{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 .main-menu ul li:hover > .tp-submenu{
-    opacity: 1;
-    visibility: visible;
-    top: 205%;
+  opacity: 1;
+  visibility: visible;
+  top: 205%;
+}
+.main-menu ul li{
+  position: relative;
+}
+.main-menu > ul > li::after {
+	position: absolute;
+	content: '';
+	height: 1px;
+	width: 0;
+	background: #FF8C42;
+	bottom: -27px;
+	left: 0;
+  transition: .3s;
+}
+.main-menu > ul > li:hover::after{
+  width: 55px;
 }
 
   /*----------------------------------------*/
