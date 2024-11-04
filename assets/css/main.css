@@ -246,6 +246,14 @@ h1,h2,h3,h4,h5,h6{
   border-top: 1px solid rgba(111, 81, 56, 0.4) !important;
   border-bottom: none !important;
 }
+/* left-side-sticky-here */
+@media (min-width:1024px) {
+  .vt-left-side-sticky {
+    position: sticky;
+    top: 20px;
+    transition: top .15s ease-out;
+  }
+}
 
 /* mobil-menu-start */
 /* main-menu css*/
