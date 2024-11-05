@@ -65,6 +65,42 @@
         slidesToScroll: 1
     });
 
+    // mobile-device-slide-active//
+    const settings = {
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        mobileFirst: true,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 639,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1023,
+                settings: "unslick"
+            },
+    
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    };
+    const sl = $('.vt-item-active').slick(settings);
+
+    $(window).on('resize', function () {
+        if ($(window).width() < 1023 && !sl.hasClass('slick-initialized')) {
+            $('.vt-item-active').slick(settings);
+        }
+    });
+    // mobile-device-slide-active-end//
+    
      // jquery-tabs//
     if($('.vt-filter-tab li a').length > 0){
         $('.vt-filter-tab li a').click(function(e){
