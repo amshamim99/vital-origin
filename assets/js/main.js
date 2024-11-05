@@ -72,6 +72,28 @@
         slidesToShow: 1,
         slidesToScroll: 1
     });
+     // testimonial-active//
+     $('.testimonial-active').slick({
+        infinite: true,
+        arrows:true,
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow:'<button type="button" class="slick-prev"> <i class="fi-chevron-left"></i></button>',
+        nextArrow:'<button type="button" class="slick-next"> <i class="fi-chevron-right"></i></button>',
+        responsive: [
+            { breakpoint: 450,
+                settings: { 
+                    arrows: false, 
+                }
+            },
+            { breakpoint: 1024,
+                    settings: { 
+                    arrows: false, 
+                }
+            },
+        ]
+    });
 
     // mobile-device-slide-active//
     const settings = {
