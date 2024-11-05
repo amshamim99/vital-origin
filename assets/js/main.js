@@ -39,6 +39,14 @@
 	});
     // mobile-menu-end//
 
+    // cart-open-and close///
+	$(".vt-cart-open").on("click", function () {
+		$(".vt-cart-area").addClass("cart-active");
+	});
+	$(".vt-cart-close").on("click", function () {
+		$(".vt-cart-area").removeClass("cart-active");
+	});
+
 
     // menu-fixed-top///
     if($('.main-header, .main-header-tow').length > 0){
@@ -100,7 +108,7 @@
         }
     });
     // mobile-device-slide-active-end//
-    
+
      // jquery-tabs//
     if($('.vt-filter-tab li a').length > 0){
         $('.vt-filter-tab li a').click(function(e){

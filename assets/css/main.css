@@ -628,3 +628,28 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 100%;
   cursor: pointer;
 }
+/* vt-cart-area */
+.vt-cart-area{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  overscroll-behavior-y: contain;
+   -webkit-transform: translateX(calc(100% + 80px));
+  -moz-transform: translateX(calc(100% + 80px));
+  -ms-transform: translateX(calc(100% + 80px));
+  -o-transform: translateX(calc(100% + 80px));
+  transform: translateX(calc(100% + 80px));
+  transition: all 0.3s 0s ease-out;
+  z-index: 9999999999;
+}
+.vt-cart-area.cart-active {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
