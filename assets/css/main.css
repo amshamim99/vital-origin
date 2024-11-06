@@ -701,3 +701,16 @@ h1,h2,h3,h4,h5,h6{
   -o-transform: translateX(0);
   transform: translateX(0);
 }
+
+/* add to cart bottom-prouduct-details-page */
+@media (max-width:1023px) {
+  .vt-button-sticky.vt-sticky{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: bottom .15s ease-out;
+    display: block !important;
+    z-index: 9999;
+  }
+}

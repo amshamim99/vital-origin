@@ -47,6 +47,18 @@
 		$(".vt-cart-area").removeClass("cart-active");
 	});
 
+    // scroll-down-bottom-add to cart//
+    if($('.vt-button-sticky').length > 0){
+            var fixed_bottom = $(".vt-button-sticky");
+            $(window).on("scroll", function() {
+            if ($(this).scrollTop() > 700) {
+                fixed_bottom.addClass("vt-sticky");
+            }else {
+                fixed_bottom.removeClass("vt-sticky");
+
+            }
+        });
+    }
     // search///
     $('.search-icon').on('click',function(){
         $('.search-form').slideToggle({direction:"up"},900)
