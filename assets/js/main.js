@@ -47,6 +47,11 @@
 		$(".vt-cart-area").removeClass("cart-active");
 	});
 
+    // search///
+    $('.search-icon').on('click',function(){
+        $('.search-form').slideToggle({direction:"up"},900)
+      
+    })
 
     // menu-fixed-top///
     if($('.main-header, .main-header-tow').length > 0){

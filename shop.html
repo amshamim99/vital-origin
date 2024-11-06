@@ -221,10 +221,16 @@
                         <span class="vt-text-base vt-text-primary vt-font-medium vt-leading-7 ">Subscribe & save 10%</span>
                     </div>
                 </li>
-                <li>
-                    <button class="vt-h-[59px] vt-w-[65px] vt-bg-white vt-rounded-xl vt-border vt-border2 vt-custom-shadow-2 vt-flex vt-justify-center vt-items-center vt-cursor-pointer">
+                <li class="vt-relative">
+                    <button class="search-icon vt-h-[59px] vt-w-[65px] vt-bg-white vt-rounded-xl vt-border vt-border2 vt-custom-shadow-2 vt-flex vt-justify-center vt-items-center vt-cursor-pointer">
                         <i class="fi-search"></i>
                     </button>
+                    <div class="search-form vt-absolute vt-right-0 vt-hidden vt-top-16 vt-z-20">
+                        <form action="#" class="vt-relative">
+                            <input class="vt-h-12 vt-outline-none vt-bg-white vt-text-primary vt-rounded vt-border vt-border3 vt-px-12" type="text" placeholder="Search">
+                            <button class="vt-absolute vt-left-4 vt-top-[50%] vt-translate-y-[-50%]"><i class="fi-search"></i></button>
+                        </form>
+                    </div>
                 </li>
                 <li class="vt-hidden lg:vt-block">
                     <a href="#" id="vt-tab-1" class="active vt-bg-white vt-flex vt-items-center vt-gap-2 vt-w-[198px] vt-h-[59px] vt-px-3 vt-py-2 vt-rounded-xl vt-border vt-border2 vt-custom-shadow-2">
@@ -251,7 +257,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="vt-relative lg:vt-hidden xl:vt-block">
+            <div class="vt-relative vt-hidden sm:vt-block lg:vt-hidden xl:vt-block">
                 <select class="vt-bg-white vt-w-[241px] vt-h-[59px] vt-text-base vt-text-primary vt-font-medium vt-leading-7 vt-outline-none vt-py-4 vt-px-14 vt-rounded-xl vt-border vt-border2 vt-custom-shadow-2 vt-cursor-pointer">
                     <option>Sort by</option>
                     <option>Sort by</option>
